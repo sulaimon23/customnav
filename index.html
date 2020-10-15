@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <!-- <a href="" class="logo">
+                <img src="" alt="logo">
+            </a> -->
+            <a href="" class="logo logo-small">
+                <img src="" alt="logo" width="30" height="30">
+            </a>
+        </div>
+        <a href="#" id="toggle_btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="top-nav-search">
+            <form action="">
+                <input type="text" class="form-control" placeholder="Search here">
+                <button class="btn" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <a  class="mobile_btn" id="mobile_btn">
+            <i class="fa"></i>
+        </a>
+        <ul class="nav user-menu">
+            <li class="nav-item dropdown app-dropdown">
+                <i class="fa fa-bars"></i>
+            </li>
+            <li class="nav-item dropdown noti-dropdown">
+                <i class="fa fa-bell"></i>
+            </li>
+            
+            <li class="nav-item drop has-arrow dropbtn" onclick="myFunction()">
+                <img src="" alt="logo" width="30" height="30"  class="dropbtn">
+                <i class="fa fa-angle-down dropbtn"></i>
+                    
+            </li>
+        </ul>
+        
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+    </div>
+    
+
+    
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
