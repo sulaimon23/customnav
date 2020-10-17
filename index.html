@@ -1,80 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+
+
+
     <div class="header">
-        <div class="header-left">
-            <!-- <a href="" class="logo">
-                <img src="" alt="logo">
-            </a> -->
-            <a href="" class="logo logo-small">
-                <img src="" alt="logo" width="30" height="30">
-            </a>
-        </div>
-        <a href="#" id="toggle_btn">
-            <i class="fa fa-bars"></i>
-        </a>
-        <div class="top-nav-search">
-            <form action="">
-                <input type="text" class="form-control" placeholder="Search here">
-                <button class="btn" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
-        <a  class="mobile_btn" id="mobile_btn">
-            <i class="fa"></i>
-        </a>
-        <ul class="nav user-menu">
-            <li class="nav-item dropdown app-dropdown">
-                <i class="fa fa-bars"></i>
-            </li>
-            <li class="nav-item dropdown noti-dropdown">
-                <i class="fa fa-bell"></i>
-            </li>
+
+        <div id="mySidenav" class="sidenav">
+
+            <div class="header-left">
+                <i class="fa fa-building" style="font-size: 40px;"></i>
+                <div>
+                    <h1>Ventura</h1>
+                </div>
+
+            </div>
+
+            <!-- nav bar links -->
+
+            <ul class="side_links">
+                <h5>Main</h5>
+                <li>
+                    <div><i class="fa fa-home"></i><h4>Home</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-cogs"></i><h4>Services</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-bar-chart"></i><h4>Projects</h4></div>
+                </li>
+                <li>
+                    <div><i class="fa fa-info-circle"></i><h4>About</h4></div>
+
+                </li>
+                <li>
+                    <div><i class="fa fa-user"></i><h4>Info</h4></div>
+
+                </li>
+                <h5>Pages</h5>
+                <li>
+                    <div><i class="fa fa-home"></i><h4>Home</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-cogs"></i><h4>Services</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-bar-chart"></i><h4>Projects</h4></div>
+                </li>
+                <li>
+                    <div><i class="fa fa-info-circle"></i><h4>About</h4></div>
+
+                </li>
+                <li>
+                    <div><i class="fa fa-user"></i><h4>Info</h4></div>
+
+                </li>
+                <h5>UI Interface</h5>
+                <li>
+                    <div><i class="fa fa-home"></i><h4>Home</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-cogs"></i><h4>Services</h4></div>
+                </li>
+                <li>
+
+                    <div><i class="fa fa-bar-chart"></i><h4>Projects</h4></div>
+                </li>
+                <li>
+                    <div><i class="fa fa-info-circle"></i><h4>About</h4></div>
+
+                </li>
+                <li>
+                    <div><i class="fa fa-user"></i><h4>Info</h4></div>
+
+                </li>
+            </ul>
             
-            <li class="nav-item drop has-arrow dropbtn" onclick="myFunction()">
-                <img src="" alt="logo" width="30" height="30"  class="dropbtn">
-                <i class="fa fa-angle-down dropbtn"></i>
-                    
-            </li>
-        </ul>
-        
-        <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
+
+
+        </div>
+
+
+        <!-- <a data-toggle="collapse" data-target="#collapseExampleArea" href="#collapseExampleArea" aria-expanded="false">
+            Click to toggle collapse status of section below
+            <div class="expand_caret caret"></div>
+          </a>
+          <div id="collapseExampleArea" class="collapse">
+            <p>Content inside the collapse area</p>
+          </div> -->
+
+          <!-- .expand_caret {
+            transform: scale(1.6);
+            margin-left: 8px;
+            margin-top: -4px;
+        }
+        a[aria-expanded='false'] > .expand_caret {
+            transform: scale(1.6) rotate(-90deg);
+        } -->
+
+        <div id="main">
+            <a href="#" id="toggle_btn">
+                <i class="fa fa-bars" onclick="openNav()"></i>
+            </a>
+            <div class="top-nav-search">
+                <form action="">
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fa"></i>
+            </a>
+            <ul class="nav user-menu">
+                <li class="nav-item dropdown app-dropdown">
+                    <i class="fa fa-bars"></i>
+                </li>
+                <li class="nav-item dropdown noti-dropdown">
+                    <i class="fa fa-bell"></i>
+                </li>
+
+                <li class="nav-item drop has-arrow dropbtn" onclick="myFunction()">
+                    <i class="fa fa-user dropbtn"></i>
+                    <i class="fa fa-angle-down dropbtn"></i>
+
+                </li>
+            </ul>
+
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- main section -->
+
+            <div class="page">
+
+            </div>
+
+        </div>
+
+
     </div>
-    
 
     
+
+
     <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
         function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-        
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
-          }
         }
-        </script>
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        let toggle = true
+
+        function openNav() {
+            if (toggle) {
+                document.getElementById("mySidenav").style.width = "70px";
+                document.getElementById("main").style.marginLeft = "70px";
+            }
+            if (toggle = !toggle) {
+                document.getElementById("mySidenav").style.width = "220px";
+                document.getElementById("main").style.marginLeft = "220px";
+            }
+
+        }
+    </script>
+
 </body>
+
 </html>
